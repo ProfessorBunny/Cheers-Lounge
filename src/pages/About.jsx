@@ -10,8 +10,10 @@ const About = () => {
         unforgettable drinking experiences. At Cheers Lounge, we are passionate
         about the art of mixology, and we are dedicated to bringing you the most
         exquisite and diverse cocktail recipes that cater to all tastes and
-        occasions.
-        <br /> Whether you're a seasoned bartender, a home mixologist, or simply
+        occasions.{" "}
+      </p>
+      <p>
+        Whether you're a seasoned bartender, a home mixologist, or simply
         someone who enjoys sipping on a well-crafted cocktail, you'll find
         everything you need to elevate your drink-making skills and delight your
         senses. Our website boasts an extensive and constantly expanding
