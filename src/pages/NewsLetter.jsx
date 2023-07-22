@@ -1,4 +1,4 @@
 const NewsLetter = () => {
-  return <div>NewsLetter</div>;
+  return <h4>NewsLetter</h4>;
 };
 export default NewsLetter;
