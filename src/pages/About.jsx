@@ -4,12 +4,22 @@ const About = () => {
     <Wrapper>
       <h3>About Us</h3>
       <p>
-        Introducing "MixMaster," the ultimate party sidekick app that fetches
-        cocktails from the hilarious Cocktails DB API. With a flick of your
-        finger, you'll unlock a treasure trove of enchanting drink recipes
-        that'll make your taste buds dance and your friends jump with joy. Get
-        ready to shake up your mixology game, one fantastical mocktail at a
-        time, and let the laughter and giggles flow!
+        Welcome to Cheers Lounge, your virtual oasis of mixology and cocktail
+        artistry! Prepare to embark on a delightful journey through the world of
+        libations, where creativity and taste blend seamlessly to create
+        unforgettable drinking experiences. At Cheers Lounge, we are passionate
+        about the art of mixology, and we are dedicated to bringing you the most
+        exquisite and diverse cocktail recipes that cater to all tastes and
+        occasions.
+        <br /> Whether you're a seasoned bartender, a home mixologist, or simply
+        someone who enjoys sipping on a well-crafted cocktail, you'll find
+        everything you need to elevate your drink-making skills and delight your
+        senses. Our website boasts an extensive and constantly expanding
+        collection of cocktail recipes, carefully curated and tested by our team
+        of expert mixologists. From timeless classics to contemporary creations,
+        each recipe is meticulously crafted with detailed step-by-step
+        instructions and precise measurements, ensuring you achieve perfection
+        in every pour.
       </p>
     </Wrapper>
   );
