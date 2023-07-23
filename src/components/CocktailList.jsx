@@ -5,13 +5,13 @@ const CocktailList = ({ drinks }) => {
     return <h4 style={{ textAlign: "center" }}>No Drinks found :(</h4>;
   }
   const formattedDrinks = drinks.map((drink) => {
-    const { idDrink, strAlcoholic, strDrinkThumb, strGlass, strDrink } = drink;
+    // const { idDrink, strAlcoholic, strDrinkThumb, strGlass, strDrink } = drink;
     return {
-      id: idDrink,
-      name: strDrink,
-      info: strAlcoholic,
-      glass: strGlass,
-      image: strDrinkThumb,
+      id: drink.idDrink,
+      name: drink.strDrink,
+      info: drink.strAlcoholic,
+      glass: drink.strGlass,
+      image: drink.strDrinkThumb,
     };
   });
   return (
