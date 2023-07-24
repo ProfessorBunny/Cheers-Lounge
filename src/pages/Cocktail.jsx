@@ -12,8 +12,15 @@ export const loader = async ({ params }) => {
 
 const Cocktail = () => {
   const { id, data } = useLoaderData();
-  console.log(data);
-  console.log(id);
-  return <h4>Cocktail</h4>;
+  const dataForSingleDrink = data.drinks[0];
+  const {
+    strDrink: name,
+    strDrinkThumb: image,
+    strCategory: category,
+    strGlass: glass,
+    strInstructions: instructions,
+    strAlcoholic: info,
+  } = dataForSingleDrink;
+  return <Wrapper>Cocktail</Wrapper>;
 };
 export default Cocktail;
