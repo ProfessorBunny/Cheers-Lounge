@@ -14,8 +14,7 @@ export const loader = async () => {
 
 const Landing = () => {
   const { drinks, searchedDrink } = useLoaderData();
-  console.log(drinks);
-  console.log(searchedDrink);
+  // console.log(searchedDrink);
   return (
     <>
       <CocktailList drinks={drinks} />
