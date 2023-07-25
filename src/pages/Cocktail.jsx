@@ -13,6 +13,7 @@ export const loader = async ({ params }) => {
 const Cocktail = () => {
   const { id, data } = useLoaderData();
   const dataForSingleDrink = data.drinks[0];
+  console.log(dataForSingleDrink);
   const {
     strDrink: name,
     strDrinkThumb: image,
@@ -21,6 +22,11 @@ const Cocktail = () => {
     strInstructions: instructions,
     strAlcoholic: info,
   } = dataForSingleDrink;
+
+  const ingredients = Object.keys(dataForSingleDrink).filter(
+    (key) => key.startsWith("strIngredient") && dataForSingleDrink[key] !== null
+  );
+  console.log(ingredients);
   return (
     <Wrapper>
       <header>
