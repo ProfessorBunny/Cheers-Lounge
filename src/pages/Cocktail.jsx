@@ -12,6 +12,9 @@ export const loader = async ({ params }) => {
 
 const Cocktail = () => {
   const { id, data } = useLoaderData();
+  if (data.drinks === null) {
+    return <h2>No cocktail found</h2>;
+  }
   const dataForSingleDrink = data.drinks[0];
   const {
     strDrink: name,
