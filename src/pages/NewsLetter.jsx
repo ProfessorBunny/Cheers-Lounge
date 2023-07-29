@@ -7,11 +7,15 @@ const newsletterUrl = "https://www.course-api.com/cocktails-newsletter";
 export const action = async ({ request }) => {
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
-
-  const response = await axios.post(newsletterUrl, data);
-  console.log(response);
-  toast.success(response.data.msg);
-  return redirect("/");
+  try {
+    const response = await axios.post(newsletterUrl, data);
+    console.log(response);
+    toast.success(response.data.msg);
+    return redirect("/");
+  } catch (error) {
+    console.log(error);
+    toast.error(error?.response?.data?.msg);
+  }
 
   return null;
 };
@@ -32,7 +36,7 @@ const NewsLetter = () => {
           className="form-input"
           name="name"
           id="name"
-          required
+          // required
           defaultValue="Nikunj"
         />
       </div>
@@ -45,7 +49,7 @@ const NewsLetter = () => {
           type="text"
           className="form-input"
           name="lastName"
-          required
+          // required
           id="lastName"
           defaultValue="Raghav"
         />
@@ -60,7 +64,7 @@ const NewsLetter = () => {
           className="form-input"
           name="email"
           id="email"
-          required
+          // required
           defaultValue="test@test.com"
         />
       </div>
