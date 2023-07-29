@@ -76,7 +76,7 @@ const NewsLetter = () => {
         style={{ marginTop: "0.5 rem" }}
         disabled={isSubmitting}
       >
-        Submit
+        {isSubmitting ? "Submitting" : "Submit"}
       </button>
     </Form>
   );
