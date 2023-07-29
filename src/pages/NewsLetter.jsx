@@ -7,7 +7,12 @@ const newsletterUrl = "https://www.course-api.com/cocktails-newsletter";
 export const action = async ({ request }) => {
   const formData = await request.formData();
   const data = Object.fromEntries(formData);
-  console.log(data);
+
+  const response = await axios.post(newsletterUrl, data);
+  console.log(response);
+  toast.success(response.data.msg);
+  // return redirect("/");
+
   return null;
 };
 
