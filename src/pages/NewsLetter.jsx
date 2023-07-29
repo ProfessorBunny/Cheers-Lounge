@@ -1,6 +1,13 @@
+import { Form } from "react-router-dom";
+
+export const action = async ({ request }) => {
+  console.log(request);
+  return null;
+};
+
 const NewsLetter = () => {
   return (
-    <form className="form">
+    <Form className="form" method="post">
       <h4 style={{ textAlign: "center", marginBottom: "2 rem" }}>
         Our Newsletter
       </h4>
@@ -50,7 +57,7 @@ const NewsLetter = () => {
       >
         Submit
       </button>
-    </form>
+    </Form>
   );
 };
 export default NewsLetter;
