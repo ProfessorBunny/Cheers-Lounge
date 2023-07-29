@@ -37,7 +37,7 @@ const NewsLetter = () => {
           name="name"
           id="name"
           // required
-          defaultValue="Nikunj"
+          placeholder="Nikunj"
         />
       </div>
       {/* {Last Name} */}
@@ -51,7 +51,7 @@ const NewsLetter = () => {
           name="lastName"
           // required
           id="lastName"
-          defaultValue="Raghav"
+          placeholder="Raghav"
         />
       </div>
       {/* {Email} */}
