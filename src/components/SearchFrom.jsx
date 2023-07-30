@@ -12,9 +12,9 @@ const SearchFrom = () => {
           className="form-input"
           defaultValue="Gin"
         />
-        <button type="submit" className="btn">
+        <button type="submit" className="btn" disabled={isSubmitting}>
           {" "}
-          Search
+          {isSubmitting ? "Searching..." : "Search"}
         </button>
       </Form>
     </Wrapper>
