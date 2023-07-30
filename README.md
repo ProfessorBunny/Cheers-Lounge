@@ -61,4 +61,4 @@ Once you have the Cocktail Recipe Finder React app running locally, you can star
 
 ## Credits
 
-This Cocktail Recipe Finder React app built with Vite was developed by [ProfessorBunny] to demonstrate using React Router and React Query to create a seamless and performant user experience for searching cocktail recipes.
+This Cocktail Recipe Finder React app built with Vite was developed by [https://github.com/ProfessorBunny] to demonstrate using React Router and React Query to create a seamless and performant user experience for searching cocktail recipes.
