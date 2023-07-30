@@ -6,9 +6,9 @@ import { useQuery } from "@tanstack/react-query";
 const cocktailSearchUrl =
   "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 
-const searchDrinkQuery = (searchedDrink) => {
+const searchDrinksQuery = (searchedDrink) => {
   return {
-    queryKey: ["search", searchedDrink || "Gin"],
+    queryKey: ["search", searchedDrink || "gin"],
     queryFn: async () => {
       const response = await axios.get(`${cocktailSearchUrl}${searchedDrink}`);
       return response.data.drinks;
@@ -20,16 +20,16 @@ export const loader =
   (queryClient) =>
   async ({ request }) => {
     const url = new URL(request.url);
-    const searchedDrink = url.searchParams.get("search") || "Gin";
+    const searchedDrink = url.searchParams.get("search") || "gin";
     // const response = await axios.get(`${cocktailSearchUrl}${searchedDrink}`);
-    await queryClient.ensureQueryData(searchDrinkQuery(searchedDrink));
+    await queryClient.ensureQueryData(searchDrinksQuery(searchedDrink));
 
     return { searchedDrink };
   };
 
 const Landing = () => {
   const { searchedDrink } = useLoaderData();
-  const { data: drinks } = useQuery(searchDrinkQuery(searchedDrink));
+  const { data: drinks } = useQuery(searchDrinksQuery(searchedDrink));
 
   return (
     <>

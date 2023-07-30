@@ -17,7 +17,7 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      staleTime: 1000 * 60 * 8,
+      staleTime: 1000 * 60 * 10,
     },
   },
 });
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
       {
         path: "/cocktail/:id",
         errorElement: <SinglePageError />,
-        loader: singleCocktailoader,
+        loader: singleCocktailoader(queryClient),
         element: <Cocktail />,
       },
       {
