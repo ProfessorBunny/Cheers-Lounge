@@ -11,6 +11,7 @@ const SearchFrom = ({ searchedDrink }) => {
           type="search"
           name="search"
           className="form-input"
+          style={{ textTransform: "capitalize" }}
           defaultValue={searchedDrink}
         />
         <button type="submit" className="btn" disabled={isSubmitting}>
