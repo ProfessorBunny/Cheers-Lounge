@@ -16,7 +16,6 @@ export const action = async ({ request }) => {
     console.log(error);
     toast.error(error?.response?.data?.msg);
   }
-
   return null;
 };
 
@@ -24,7 +23,7 @@ const NewsLetter = () => {
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";
   return (
-    <Form className="form" method="post">
+    <Form className="form" method="POST">
       <h4 style={{ textAlign: "center", marginBottom: "2 rem" }}>
         Our Newsletter
       </h4>
