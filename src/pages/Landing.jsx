@@ -8,7 +8,7 @@ const cocktailSearchUrl =
 
 const searchDrinkQuery = (searchedDrink) => {
   return {
-    queryKey: ["search", searchedDrink || "all"],
+    queryKey: ["search", searchedDrink || "Gin"],
     queryFn: async () => {
       const response = await axios.get(`${cocktailSearchUrl}${searchedDrink}`);
       return response.data.drinks;
@@ -16,13 +16,16 @@ const searchDrinkQuery = (searchedDrink) => {
   };
 };
 
-export const loader = async ({ request }) => {
-  const url = new URL(request.url);
-  const searchedDrink = url.searchParams.get("search") || "Gin";
-  // const response = await axios.get(`${cocktailSearchUrl}${searchedDrink}`);
+export const loader =
+  (queryClient) =>
+  async ({ request }) => {
+    const url = new URL(request.url);
+    const searchedDrink = url.searchParams.get("search") || "Gin";
+    // const response = await axios.get(`${cocktailSearchUrl}${searchedDrink}`);
+    await queryClient.ensureQueryData(searchDrinkQuery(searchedDrink));
 
-  return { searchedDrink };
-};
+    return { searchedDrink };
+  };
 
 const Landing = () => {
   const { searchedDrink } = useLoaderData();
