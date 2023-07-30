@@ -6,8 +6,9 @@ import SearchFrom from "../components/SearchFrom";
 const cocktailSearchUrl =
   "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=";
 
-export const loader = async () => {
-  const saearchedDrink = "Gin";
+export const loader = async ({ request }) => {
+  const url = new URL(request.url);
+  const saearchedDrink = url.searchParams.get("search") || "Gin";
   const response = await axios.get(`${cocktailSearchUrl}${saearchedDrink}`);
 
   return { drinks: response.data.drinks, saearchedDrink };
