@@ -11,7 +11,7 @@ const SearchFrom = ({ searchedDrink }) => {
           type="search"
           name="search"
           className="form-input"
-          defaultValue={searchedDrink || "Gin"}
+          defaultValue={searchedDrink}
         />
         <button type="submit" className="btn" disabled={isSubmitting}>
           {" "}
