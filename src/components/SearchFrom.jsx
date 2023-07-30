@@ -1,8 +1,9 @@
 import Wrapper from "../assets/wrappers/SearchForm";
 import { Form, useNavigation } from "react-router-dom";
-const SearchFrom = () => {
+const SearchFrom = ({ searchedDrink }) => {
   const navigation = useNavigation();
   const isSubmitting = navigation.state === "submitting";
+  console.log(searchedDrink);
   return (
     <Wrapper>
       <Form className="form">
@@ -10,7 +11,7 @@ const SearchFrom = () => {
           type="search"
           name="search"
           className="form-input"
-          defaultValue="Gin"
+          defaultValue={searchedDrink || "Gin"}
         />
         <button type="submit" className="btn" disabled={isSubmitting}>
           {" "}

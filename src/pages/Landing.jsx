@@ -8,10 +8,10 @@ const cocktailSearchUrl =
 
 export const loader = async ({ request }) => {
   const url = new URL(request.url);
-  const saearchedDrink = url.searchParams.get("search") || "Gin";
-  const response = await axios.get(`${cocktailSearchUrl}${saearchedDrink}`);
+  const searchedDrink = url.searchParams.get("search") || "Gin";
+  const response = await axios.get(`${cocktailSearchUrl}${searchedDrink}`);
 
-  return { drinks: response.data.drinks, saearchedDrink };
+  return { drinks: response.data.drinks, searchedDrink };
 };
 
 const Landing = () => {
@@ -19,7 +19,7 @@ const Landing = () => {
   // console.log(searchedDrink);
   return (
     <>
-      <SearchFrom />
+      <SearchFrom searchedDrink={searchedDrink} />
       <CocktailList drinks={drinks} />
     </>
   );
