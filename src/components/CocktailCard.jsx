@@ -12,7 +12,7 @@ const CocktailCard = ({ id, name, info, glass, image }) => {
         <p>{info}</p>
         <Link to={`/cocktail/${id}`} className="btn">
           {" "}
-          Details
+          Detail
         </Link>
       </div>
     </Wrapper>
