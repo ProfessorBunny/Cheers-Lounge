@@ -1,6 +1,6 @@
 # Cocktail Recipe Finder React App (built with Vite)
 
-This is a React app that allows users to search for various cocktail recipes using the CocktailDB API. The app is built with Vite, utilizing React Router for seamless navigation across multiple pages. React Query is used for caching the data on the server to prevent the app from making multiple requests for the same query, thus providing a faster user interface.
+This is a React app that allows users to search for various cocktail recipes using the CocktailDB API. The app is built with Vite, utilizing React Router for seamless navigation across multiple pages. React Query is used for caching the data on the server to prevent the app from making multiple requests for the same query, thus providing a faster UI.
 
 ## Features
 
