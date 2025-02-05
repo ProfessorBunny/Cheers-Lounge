@@ -1,10 +1,10 @@
 import Wrapper from "../assets/wrappers/CocktailCard";
 import { Link } from "react-router-dom";
-const CocktailCard = ({ id, name, info, glass, image }) => {
+const CocktailCard = ({ id, name, info, glass, img }) => {
   return (
     <Wrapper>
       <div className="img-container">
-        <img src={image} alt={name} className="img" />
+        <img src={img} alt={name} className="img" />
       </div>
       <div className="footer">
         <h4>{name}</h4>
