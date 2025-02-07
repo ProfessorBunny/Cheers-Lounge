@@ -4,13 +4,15 @@ const About = () => {
     <Wrapper>
       <h3>About Us</h3>
       <p>
-        Welcome to Cheers Lounge, your virtual oasis of mixology and cocktail
-        artistry! Prepare to embark on a delightful journey through the world of
-        libations, where creativity and taste blend seamlessly to create
-        unforgettable drinking experiences. At Cheers Lounge, we are passionate
-        about the art of mixology, and we are dedicated to bringing you the most
-        exquisite and diverse cocktail recipes that cater to all tastes and
-        occasions.{" "}
+        Welcome to Cheers Lounge, your ultimate destination for exquisite
+        cocktail recipes and mixology inspiration! Whether you're a seasoned
+        bartender or an enthusiastic home mixologist, we've got something for
+        everyone who loves the art of crafting delicious drinks. At Cheers
+        Lounge, we believe that every cocktail tells a story. Our mission is to
+        share those stories with you through a curated collection of classic
+        favorites, innovative creations, and seasonal specialties. We aim to
+        inspire you to shake, stir, and pour with confidence, transforming your
+        home bar into a place of endless possibilities.{" "}
       </p>
       <p>
         Whether you're a seasoned bartender, a home mixologist, or simply
