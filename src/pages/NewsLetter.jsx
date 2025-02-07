@@ -30,7 +30,7 @@ const NewsLetter = () => {
       {/* {First Name} */}
       <div className="form-row">
         <label htmlFor="name" className="form-label">
-          Name
+          First Name
         </label>
         <input
           type="text"
